@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Bar Interaction</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="menu-bar">
+        <button onclick="showContent('content1')">Button 1</button>
+        <button onclick="showContent('content2')">Button 2</button>
+        <button onclick="showContent('content3')">Button 3</button>
+    </div>
+
+    <div class="content" id="content1">This is content for Button 1</div>
+    <div class="content" id="content2">This is content for Button 2</div>
+    <div class="content" id="content3">This is content for Button 3</div>
+    <button id="loginBtn">点击登录</button>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>登录</h2>
+            <form>
+                <label>用户名:</label>
+                <input type="text" name="username" required><br>
+                <label>密码:</label>
+                <input type="password" name="password" required><br>
+                <input type="submit" value="登录">
+            </form>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

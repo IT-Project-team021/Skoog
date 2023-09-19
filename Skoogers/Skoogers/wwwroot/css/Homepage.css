@@ -1,0 +1,17 @@
+﻿.Menu_bar {
+    background-color: #EBE9E9;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.background {
+    width: 1920px;
+    height: 1080px;
+    background-color: #C6EFF9;
+    margin: 0;
+}
+
+.account{
+    float: right;
+}
