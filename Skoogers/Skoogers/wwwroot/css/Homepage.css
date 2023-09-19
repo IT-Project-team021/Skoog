@@ -2,9 +2,25 @@
     background-color: #EBE9E9;
     padding: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
+.Menu_bar img {
+    margin-right: 40px;
+    align-items: center;
+}
+
 .background {
     width: 1920px;
     height: 1080px;
@@ -12,6 +28,6 @@
     margin: 0;
 }
 
-.account{
-    float: right;
+.account {
+    
 }
