@@ -1,0 +1,123 @@
+.Menu_bar {
+    background-color: #EBE9E9;
+    padding: 10px;
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+}
+.background {
+    width: 1920px;
+    height: 1080px;
+    background-color: #C6EFF9;
+    margin: 0;
+}
+
+.account{
+    float: right;
+}
+
+.Calendar {
+    margin: 0 auto;
+    margin-top: 100px;
+    
+    width: 1720px;
+    height: 730px;
+    background-color: #d1acf3;
+    border-radius: 50px;
+}
+
+.Daily_rewards {
+    width: 1715px;
+    height: 150px;
+    background-color: #6009b1;
+    border: 2px solid #6009b1;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.Daily_rewards p {
+    font-size: 45px;
+    margin-top: 50px;
+    font-weight: bold;
+    color: white;
+
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.Rewards {
+    display: flex;
+}
+
+.Dates {
+    width: 1000px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.Dates ul {
+    display: inline-flex;
+    list-style: none;
+    padding: 0;
+}
+
+.Dates li {
+    float: left;
+    width: 100px;
+    height: 100px;
+    border: 5px solid #000;
+    background-color: #ffdd44;
+    margin-right: 15px;
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Dates .last {
+    margin-right: 0;
+}
+
+.Text {
+    width: 600px;
+    height: 100px;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+}
+
+.Chest {
+    width: 250px;
+    height: 100px;
+    margin-top: 180px;
+    margin-left: 150px;
+    font-size: 35px;
+}
+
+.Get {
+    width: 400px;
+    height: 80px;
+    margin-left: 70px;
+    font-size: 35px;
+    border: 5px solid #000;
+    background-color: #ffdd44;
+    border-radius: 30px;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
