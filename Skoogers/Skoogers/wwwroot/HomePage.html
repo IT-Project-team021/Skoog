@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Bar Interaction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="css/Homepage.css">
+    <script src="js/homepage.js"></script>
 </head>
 <body>
     <div class="background">
@@ -14,8 +16,32 @@
                 <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
             </div>
+            <div class="account_button">
+                <img id="login_button" src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick="showLogin()"/>
+            </div>
+        </div>
+        <div class="log-in">
+            <button class="close-btn" onclick="hideLogin()"> &times; </button>
+            <div class="logo">
+                <img src="img/Icons/Login_Window/logo.png" alt="Image for Logo" />
+            </div>
             <div class="account">
-                <img src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick=""/>
+                <div class="account-icon"></div>
+                <div class="account-input">
+                    <input type="email" name="account_email" id="accountEmail">
+                </div>
+            </div>
+            <div class="password">
+                <div class="password-icon"></div>
+                <div class="password-input">
+                    <input type="password" name="password-input" id="passwordInput">
+                </div>
+            </div>
+            <div class="log-in-error-message">Invalid username or incorrect password~</div>
+            <div>
+                <button class="log-in-button" onclick="login()">
+                    <span class="text-wrapper">Log In</span>
+                </button>
             </div>
         </div>
     </div>

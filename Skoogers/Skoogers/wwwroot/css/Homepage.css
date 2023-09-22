@@ -2,16 +2,178 @@
     background-color: #EBE9E9;
     padding: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
+.Menu_bar img {
+    margin-right: 40px;
+    align-items: center;
+}
+
 .background {
+    position: relative;
     width: 1920px;
     height: 1080px;
     background-color: #C6EFF9;
     margin: 0;
 }
 
-.account{
-    float: right;
+.close-btn {
+    position: absolute;
+    right: 10px;   
+    top: 10px;     
+    background: none;  
+    border: none;      
+    font-size: 40px;
+    color: white;
+    cursor: pointer;   
+}
+
+.close-btn:hover {
+    color: rgb(204, 143, 143);   
+}
+
+.log-in {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 566px;
+    height: 730px;
+    background-color: #8cbaff;
+    border-radius: 20px;
+  }
+  
+  .log-in .logo{
+    height: 260px;
+    align-items: center;
+    display: flex;
+
+    justify-content: center;
+  } 
+  .log-in .logo img {
+    position: relative;
+    width: 173px;
+    margin-top: 20px;
+    margin-left: -10px;
+    height: 179px;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  
+  .log-in .password{
+    width: 400px;
+    height: 87px;
+    margin-top: 20px;
+    margin-left: 88px;
+    display: flex;  
+    align-items: center;  
+  }
+
+  .log-in .password-icon{
+    width: 89px;
+    height: 86px;
+    background-image: url(../img/Icons/Login_Window/Key_Icon.png);
+    background-size: cover;
+
+  }
+  .log-in .password-icon img{
+    position: relative;
+    width: 89px;
+    height: 94px;
+    margin: 0px;
+  }
+  
+  .log-in .password-input input{
+    margin-left: 10px;
+    font-size: 35px;
+    width: 290px;
+    height: 47px;
+  }
+  
+  .log-in .account {
+    width: 400px;
+    height: 87px;
+    margin-left: 88px;
+    margin-top: 20px;
+    display: flex;  
+    align-items: center;  
+}
+
+.log-in .account-icon {
+    width: 89px;
+    height: 86px;
+    background-image: url(../img/Icons/Login_Window/account_icon.png);
+    background-size: cover;  
+}
+
+.log-in .account-input input {
+    margin-left: 10px;
+    font-size: 35px;
+    width: 290px;
+    height: 47px;
+}
+  
+.log-in .log-in-button {
+    margin-top: 50px;
+    margin-left: 178px;
+    position: relative;
+    justify-content: center;
+    background-color: #98e4ef;
+    border-radius: 50px;
+    box-shadow: 0px 4px 4px #00000040;
+    position: relative; 
+    width: 209px;
+    height: 71px;
+    border: none;  
+    outline: none;  
+    cursor: pointer;  
+}
+
+.log-in .text-wrapper {
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    font-family: "Impact-Regular", Helvetica;
+    font-weight: 400;
+    color: #fffcfc;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    width: 209px;
+    height: 71px;
+    line-height: 65px;
+    transition: all 0.2s;
+}
+
+.log-in .log-in-button:hover {
+    background-color: #34b5b9;  /* 添加鼠标悬停效果，如果需要 */
+}
+.log-in .log-in-button:active{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.log-in .log-in-error-message{
+    display: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-items: center;
+    color: rgb(238, 120, 120);
+    font-weight: 400;
+    font-size: 20px;
+    margin-left: 120px;
 }
