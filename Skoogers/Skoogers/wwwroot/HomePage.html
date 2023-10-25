@@ -1,48 +1,41 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu Bar Interaction</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
-    <link rel="stylesheet" href="css/Homepage.css">
+    <link rel="stylesheet" href="css/HomePage.css">
     <script src="js/homepage.js"></script>
 </head>
 <body>
     <div class="background">
         <div class="Menu_bar">
-            <div>
+            <div class="Left_buttons">
                 <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
             </div>
-            <div class="account_button">
-                <img id="login_button" src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick="showLogin()"/>
+            <div class="Right_button">
+                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
+                <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window" onclick="showLogin()"/>
+            </div>
+            <div class="record_button">
+                <div class="record_background">
+                    <img src="img/Icons/Homepage/record_button.png" alt="Top Image" class="top_image">
+                    <img src="img/Icons/Homepage/undo.png" alt="Bottom Image" class="bottom_image">
+                </div>
             </div>
         </div>
-        <div class="log-in">
-            <button class="close-btn" onclick="hideLogin()"> &times; </button>
-            <div class="logo">
-                <img src="img/Icons/Login_Window/logo.png" alt="Image for Logo" />
-            </div>
-            <div class="account">
-                <div class="account-icon"></div>
-                <div class="account-input">
-                    <input type="email" name="account_email" id="accountEmail">
-                </div>
-            </div>
-            <div class="password">
-                <div class="password-icon"></div>
-                <div class="password-input">
-                    <input type="password" name="password-input" id="passwordInput">
-                </div>
-            </div>
-            <div class="log-in-error-message">Invalid username or incorrect password~</div>
-            <div>
-                <button class="log-in-button" onclick="login()">
-                    <span class="text-wrapper">Log In</span>
-                </button>
-            </div>
+        <div class="Music_botton">
+            <img src="img/Icons/Homepage/blue_button.png" alt="Image for blue_button"/>
+            <img src="img/Icons/Homepage/orange_button.png" alt="Image for orange_button"/>
+            <img src="img/Icons/Homepage/green_button.png" alt="Image for green_button"/>
+            <img src="img/Icons/Homepage/yellow_button.png" alt="Image for yellow_button"/>
+            <img src="img/Icons/Homepage/red_button.png" alt="Image for red_button"/>
+        </div>
+        <div class="Mascot">
+            <img src="img/Icons/Homepage/Mascot.png" alt="Image for Mascot"/>
         </div>
     </div>
 </body>

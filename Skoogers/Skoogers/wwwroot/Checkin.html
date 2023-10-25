@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar Interaction</title>
+    <title>Check In</title>
     <link rel="stylesheet" href="css/Checkin.css">
+    <script src="js/checkin.js"></script>
 </head>
 <body>
     <div class="background">
@@ -14,9 +15,12 @@
                 <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
             </div>
-            <div class="account">
-                <img src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick=""/>
+            <div class="account_button">
+                <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window" onclick="showLogin()"/>
             </div>
+        </div>
+        <div class="CheckInIcon">
+            <img src="img/Icons/CheckIn/CheckInIcon.png" alt="Image for CheckInIcon"/>
         </div>
         <div class="Calendar">
             <div class="Daily_rewards">
@@ -24,8 +28,8 @@
             </div>
             <div class="Rewards">
                 <div class="Dates">
-                    <u1>
-                        <li>1</li>
+                    <ul>
+                        <li id="date1">1</li>
                         <li>2</li>
                         <li>3</li>
                         <li>4</li>
@@ -56,16 +60,17 @@
                         <li>29</li>
                         <li>30</li>
                         <li class="last">31</li>
-                    </u1>
+                    </ul>
                 </div>
                 <div>
                     <div class="Text">
-                        Log in every day to get rewards
+                        Check in<br>
+                        Get Rewards
                     </div>
                     <div class="Chest">
-                        treasure chest
+                        <img src="img/Icons/CheckIn/Treasure.webp" alt="Image for Treasure" />
                     </div>
-                    <div class="Get">
+                    <div class="Get" id="getButton">
                         Get
                     </div>
                 </div>

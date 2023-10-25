@@ -1,10 +1,27 @@
 .Menu_bar {
-    background-color: #EBE9E9;
+    background-color: #000000;
     padding: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
+
+.Menu_bar img {
+    margin-right: 40px;
+    align-items: center;
+}
+
 .background {
     width: 1920px;
     height: 1080px;
@@ -20,14 +37,23 @@
     margin: 0 auto;
     margin-top: 100px;
     
-    width: 1720px;
+    width: 1560px;
     height: 730px;
     background-color: #d1acf3;
     border-radius: 50px;
+    border: 10px solid #000;
 }
 
+.CheckInIcon {
+    margin-top: 10px;
+    margin-bottom: -120px;
+    width: 100px;
+    height: 100px;
+    transform: scale(0.5);
+  }
+
 .Daily_rewards {
-    width: 1715px;
+    width: 1555px;
     height: 150px;
     background-color: #6009b1;
     border: 2px solid #6009b1;
@@ -54,23 +80,17 @@
     width: 1000px;
     height: 500px;
     margin-top: 40px;
-    margin-left: 100px;
-}
-
-.Dates ul {
-    display: inline-flex;
-    list-style: none;
-    padding: 0;
+    margin-left: 80px;
 }
 
 .Dates li {
     float: left;
-    width: 100px;
-    height: 100px;
-    border: 5px solid #000;
+    width: 70px;
+    height: 60px;
+    border: 6px solid #000;
     background-color: #ffdd44;
     margin-right: 15px;
-    margin-top: 15px;
+    margin-top: 50px;
 
     display: flex;
     flex-direction: column;
@@ -90,29 +110,29 @@
 .Text {
     width: 600px;
     height: 100px;
-    margin-top: 40px;
-    margin-left: 20px;
+    margin-top: 80px;
+    margin-left: -50px;
     font-size: 35px;
     font-weight: bold;
     color: white;
+    text-align: center;
+    
 }
 
-.Chest {
-    width: 250px;
-    height: 100px;
-    margin-top: 180px;
+.Chest img{
+    width: 200px;
+    height: auto;
     margin-left: 150px;
-    font-size: 35px;
 }
 
 .Get {
-    width: 400px;
+    width: 300px;
     height: 80px;
-    margin-left: 70px;
+    margin-left: 95px;
     font-size: 35px;
-    border: 5px solid #000;
+    border: 6px solid #000;
     background-color: #ffdd44;
-    border-radius: 30px;
+    border-radius: 50px;
 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: white;
