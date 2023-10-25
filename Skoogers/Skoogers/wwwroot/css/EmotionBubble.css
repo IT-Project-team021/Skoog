@@ -1,0 +1,76 @@
+.Menu_bar {
+    background-color: #333333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.background-image {
+    background-image: url("/Skoog/Skoogers/Skoogers/wwwroot/img/Icons/Background_image/sunshine.jpeg");
+    background-size: cover; 
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-repeat: no-repeat; 
+    opacity: 0.3;
+    background-position: center center; 
+    z-index: -1;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.Menu_bar img {
+    margin-left: 20px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.angry {
+    position: absolute;
+    left: 832px;
+    top: 305px;
+    width: 282px;
+    height: 274px;
+}
+
+.laugh {
+    position: absolute;
+    left: 639px;
+    top: 707px;
+    width: 257px;
+    height: 277px;
+}
+
+.loudly-cry {
+    position: absolute;
+    left: 217px;
+    top: 404px;
+    width: 303px;
+    height: 303px;
+}
+
+.scared {
+    position: absolute;
+    left: 1592px;
+    top: 779px;
+    width: 237px;
+    height: 237px;
+}
+
+.weary {
+    position: absolute;
+    left: 1233px;
+    top: 477px;
+    width: 305px;
+    height: 283px;
+}
