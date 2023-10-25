@@ -11,14 +11,19 @@
 <body>
     <div class="background">
         <div class="Menu_bar">
-            <div>
+            <div class="Left_buttons">
                 <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
                 <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
             </div>
-            <div class="account_button">
+            <div class="Right_button">
+                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
                 <img id="login_button" src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick="showLogin()"/>
             </div>
+        </div>
+        <div class="hint" id="login_hint">
+            Please click on the<br>
+            upper right corner to log in
         </div>
         <div class="log-in">
             <button class="close-btn" onclick="hideLogin()"> &times; </button>

@@ -17,10 +17,22 @@
     gap: 10px;
 }
 
-.Menu_bar img {
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
     margin-right: 40px;
     align-items: center;
 }
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px; /* 设置宽度 */
+    height: 130px; /* 设置高度 */
+}
+
 
 .background {
     width: 1920px;

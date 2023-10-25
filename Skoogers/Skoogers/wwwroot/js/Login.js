@@ -34,3 +34,19 @@ function showLogin() {
 function hideLogin() {
     document.querySelector('.log-in').style.display = 'none';
 }
+
+document.addEventListener("click", function(event) {
+    if (
+        event.target.id !== "login_button" &&
+        !document.querySelector('.log-in').contains(event.target)
+    ) {
+        document.getElementById("login_hint").style.display = "block";
+        setTimeout(function() {
+            document.getElementById("login_hint").style.display = "none";
+        }, 2000);
+    }
+});
+
+document.getElementById("login_hint").addEventListener("click", function(event) {
+    event.stopPropagation();
+});

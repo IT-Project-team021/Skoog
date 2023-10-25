@@ -1,25 +1,36 @@
 ﻿.Menu_bar {
-    background-color: #000000;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 1920px;
-    height: 157px;
-    overflow: auto;
-    box-sizing: border-box; 
-    align-items: center;
+  background-color: #000000;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 1920px;
+  height: 157px;
+  overflow: auto;
+  box-sizing: border-box; 
+  align-items: center;
 }
 
 .Menu_bar > div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.Menu_bar img {
-    margin-right: 40px;
-    align-items: center;
+.Menu_bar .Left_buttons img {
+  margin-left: 20px;
+  margin-right: 40px;
+  align-items: center;
+}
+
+.Menu_bar .Right_button img {
+  margin-right: 20px;
+  align-items: center;
+}
+
+#homepage_button {
+  width: 130px;
+  height: 130px;
 }
 
 .background {
@@ -28,6 +39,14 @@
     height: 1080px;
     background-color: #C6EFF9;
     margin: 0;
+}
+
+.hint {
+  text-align: center; 
+  font-weight: bold; 
+  font-size: 100px; 
+  display: none;
+  margin-top: 300px;
 }
 
 .close-btn {
@@ -55,16 +74,17 @@
     height: 730px;
     background-color: #8cbaff;
     border-radius: 20px;
-  }
+}
   
-  .log-in .logo{
+.log-in .logo{
     height: 260px;
     align-items: center;
     display: flex;
 
     justify-content: center;
-  } 
-  .log-in .logo img {
+} 
+
+.log-in .logo img {
     position: relative;
     width: 173px;
     margin-top: 20px;
@@ -72,7 +92,7 @@
     height: 179px;
     background-size: cover;
     background-position: 50% 50%;
-  }
+}
   
   .log-in .password{
     width: 400px;
@@ -90,6 +110,7 @@
     background-size: cover;
 
   }
+
   .log-in .password-icon img{
     position: relative;
     width: 89px;
