@@ -29,8 +29,8 @@
 }
 
 #homepage_button {
-    width: 130px; /* 设置宽度 */
-    height: 130px; /* 设置高度 */
+    width: 130px;
+    height: 130px;
 }
 
 .background {
@@ -51,18 +51,18 @@
 }
 
 .record_button .record_background {
-    width: 160px; /* 调整容器宽度 */
+    width: 160px;
     height: 900px;
-    padding: 10px; /* 设置内边距 */
-    background-color: #a1e7fc; /* 设置整个区域的背景颜色 */
-    position: relative; /* 使子元素定位相对于它 */
+    padding: 10px;
+    background-color: #a1e7fc;
+    position: relative;
 }
 
 .top_image {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%; /* 设置图像宽度占满父容器 */
+    width: 70%;
     margin-top: 25px;
     margin-left: 30px;
 }
@@ -71,18 +71,49 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 70%; /* 设置图像宽度占满父容器 */
+    width: 70%;
     margin-bottom: 25px;
     margin-left: 30px;
     filter: grayscale(100%);
 }
 
-.Music_botton {
+.recording_button {
+    position: absolute;
+    top: 157px;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.recording_button .recording_background {
+    width: 600px;
+    height: 250px;
+    padding: 10px;
+    background-color: #ffffffbb;
+    position: relative;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.start_image, .clock_image {
+    width: 25%;
+    margin-left: 80px;
+}
+
+.termination_image {
+    width: 20%;
+    margin-left: 20px;
+}
+
+.Music_button {
     position: relative;
 }
 
 /* Blue */
-.Music_botton img:nth-child(1) {
+.Music_button img:nth-child(1) {
     position: absolute;
     top: 350px;
     left: 770px;
@@ -91,7 +122,7 @@
 }
 
 /* Orange */
-.Music_botton img:nth-child(2) {
+.Music_button img:nth-child(2) {
     position: absolute;
     top: 640px;
     left: 770px;
@@ -100,7 +131,7 @@
 }
 
 /* Green */
-.Music_botton img:nth-child(3) {
+.Music_button img:nth-child(3) {
     position: absolute;
     top: 350px;
     left: 1060px;
@@ -109,7 +140,7 @@
 }
 
 /* Yellow */
-.Music_botton img:nth-child(4) {
+.Music_button img:nth-child(4) {
     position: absolute;
     top: 60px;
     left: 770px;
@@ -118,12 +149,56 @@
 }
 
 /* Red */
-.Music_botton img:nth-child(5) {
+.Music_button img:nth-child(5) {
     position: absolute;
     top: 350px;
     left: 480px;
     width: 220px;
     height: 220px;
+}
+
+.newMusic_button {
+    position: relative;
+}
+
+/* Blue */
+.newMusic_button img:nth-child(1) {
+    position: absolute;
+    width: 6%;
+    top: 410px;
+    left: 820px;
+}
+
+/* Orange */
+.newMusic_button img:nth-child(2) {
+    position: absolute;
+    width: 5%;
+    top: 700px;
+    left: 835px;
+}
+
+/* Green */
+.newMusic_button img:nth-child(3) {
+    position: absolute;
+    width: 5%;
+    top: 410px;
+    left: 1120px;
+}
+
+/* Yellow */
+.newMusic_button img:nth-child(4) {
+    position: absolute;
+    width: 5%;
+    top: 120px;
+    left: 830px;
+}
+
+/* Red */
+.newMusic_button img:nth-child(5) {
+    position: absolute;
+    width: 5%;
+    top: 400px;
+    left: 550px;
 }
 
 .Mascot {
@@ -133,6 +208,171 @@
 }
 
 .Mascot img {
-    width: 200px; /* 设置宽度 */
-    height: auto; /* 设置高度 */
+    width: 200px; 
+    height: auto; 
+}
+
+.library_background {
+    position: absolute;
+    width: 40%;
+    bottom: 227px;
+    left: 0;
+}
+
+.newmusicRecordingImage {
+    position: absolute;
+    width: 8%;
+    top: 23px;
+    left: 35px;
+}
+
+.Music_library img[draggable='true'] {
+    position: absolute;
+}
+
+.Animals .Paw {
+    position: absolute;
+    width: 7%;
+    top: 180px;
+    left: 48px;
+}
+
+.Animals .Dog {
+    position: absolute;
+    width: 5%;
+    top: 200px;
+    left: 260px;
+}
+
+.Animals .Cat {
+    position: absolute;
+    width: 4%;
+    top: 200px;
+    left: 400px;
+}
+
+.Animals .Cow {
+    position: absolute;
+    width: 5%;
+    top: 200px;
+    left: 520px;
+}
+
+.Animals .Chicken {
+    position: absolute;
+    width: 3.5%;
+    top: 200px;
+    left: 660px;
+}
+
+.Instruments .guitar_logo {
+    position: absolute;
+    width: 7%;
+    top: 350px;
+    left: 48px;
+}
+
+.Instruments .guitar {
+    position: absolute;
+    width: 5%;
+    top: 360px;
+    left: 260px;
+}
+
+.Instruments .Drum {
+    position: absolute;
+    width: 4%;
+    top: 370px;
+    left: 400px;
+}
+
+.Instruments .piano {
+    position: absolute;
+    width: 5%;
+    top: 360px;
+    left: 520px;
+}
+
+.Instruments .trumpet {
+    position: absolute;
+    width: 4%;
+    top: 380px;
+    left: 660px;
+}
+
+.Natural .pure_natural {
+    position: absolute;
+    width: 7%;
+    top: 520px;
+    left: 48px;
+}
+
+.Natural .waterfull {
+    position: absolute;
+    width: 5%;
+    top: 530px;
+    left: 260px;
+}
+
+.Natural .flash {
+    position: absolute;
+    width: 5%;
+    top: 530px;
+    left: 390px;
+}
+
+.Natural .cloud {
+    position: absolute;
+    width: 5%;
+    top: 530px;
+    left: 520px;
+}
+
+.Natural .wind {
+    position: absolute;
+    width: 4%;
+    top: 540px;
+    left: 660px;
+}
+
+.Special .foot {
+    position: absolute;
+    width: 5%;
+    top: 690px;
+    left: 48px;
+}
+
+.Special .grass {
+    position: absolute;
+    width: 5%;
+    top: 710px;
+    left: 260px;
+}
+
+.Special .high_heeled_shoe {
+    position: absolute;
+    width: 5%;
+    top: 710px;
+    left: 390px;
+}
+
+.Special .stairs {
+    position: absolute;
+    width: 5%;
+    top: 720px;
+    left: 520px;
+}
+
+.Special .snow_flake {
+    position: absolute;
+    width: 4%;
+    top: 720px;
+    left: 660px;
+}
+
+.search {
+    position: absolute;
+    width: 30%;
+    top: 520px;
+    left: 590px;
 }

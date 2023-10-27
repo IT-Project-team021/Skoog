@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Bar Interaction</title>
+    <title>HomePage</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="css/HomePage.css">
     <script src="js/homepage.js"></script>
@@ -12,9 +12,9 @@
     <div class="background">
         <div class="Menu_bar">
             <div class="Left_buttons">
-                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
+                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" id="musicRecordingImage" onclick="toggleOpenMusicLibrary()"/>
+                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad"/>
+                <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button"/>
             </div>
             <div class="Right_button">
                 <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
@@ -22,21 +22,70 @@
             </div>
             <div class="record_button">
                 <div class="record_background">
-                    <img src="img/Icons/Homepage/record_button.png" alt="Top Image" class="top_image">
-                    <img src="img/Icons/Homepage/undo.png" alt="Bottom Image" class="bottom_image">
+                    <img src="img/Icons/Homepage/Record_Buttons/record_button.png" alt="record_button Image" class="top_image" id="recordImage" onclick="toggleRecordingButton()"/>
+                    <img src="img/Icons/Homepage/Record_Buttons/undo.png" alt="undo Image" class="bottom_image" id="undo" onclick="togglecloseMusicButton()"/>
+                </div>
+            </div>
+            <div class="recording_button" id="recordingButton" style="display: none;">
+                <div class="recording_background">
+                    <img src="img/Icons/Homepage/Record_Buttons/Termination.png" alt="record_button Image" class="termination_image" onclick="toggleRecordingButton()">
+                    <img src="img/Icons/Homepage/Record_Buttons/Clock.png" alt="record_button Image" class="clock_image">
+                    <img src="img/Icons/Homepage/Record_Buttons/Start.png" alt="record_button Image" class="start_image">
                 </div>
             </div>
         </div>
-        <div class="Music_botton">
-            <img src="img/Icons/Homepage/blue_button.png" alt="Image for blue_button"/>
-            <img src="img/Icons/Homepage/orange_button.png" alt="Image for orange_button"/>
-            <img src="img/Icons/Homepage/green_button.png" alt="Image for green_button"/>
-            <img src="img/Icons/Homepage/yellow_button.png" alt="Image for yellow_button"/>
-            <img src="img/Icons/Homepage/red_button.png" alt="Image for red_button"/>
+        <div class="Music_button">
+            <img src="img/Icons/Homepage/Music_Buttons/blue_button.png" alt="Image for blue_button"/>
+            <img src="img/Icons/Homepage/Music_Buttons/orange_button.png" alt="Image for orange_button"/>
+            <img src="img/Icons/Homepage/Music_Buttons/green_button.png" alt="Image for green_button"/>
+            <img src="img/Icons/Homepage/Music_Buttons/yellow_button.png" alt="Image for yellow_button"/>
+            <img src="img/Icons/Homepage/Music_Buttons/red_button.png" alt="Image for red_button"/>
+        </div>
+        <div class="newMusic_button" id="newMusicButton" style="display: none;">
+            <img src="img/Icons/Homepage/Music_library/Animals/Dog.png" alt="Image for Dog" class="Dog"/>
+            <img src="img/Icons/Homepage/Music_library/Animals/Cat.png" alt="Image for Cat" class="Cat" />
+            <img src="img/Icons/Homepage/Music_library/Instruments/piano.png" alt="Image for piano" class="piano" />
+            <img src="img/Icons/Homepage/Music_library/Natural/wind.png" alt="Image for wind" class="wind" />
+            <img src="img/Icons/Homepage/Music_library/Special/high_heeled_shoe.png" alt="Image for high_heeled_shoe" class="high_heeled_shoe" />
         </div>
         <div class="Mascot">
-            <img src="img/Icons/Homepage/Mascot.png" alt="Image for Mascot"/>
+            <img src="img/Icons/Homepage/Mascot.png" alt="Image for Mascot" onclick="toggleSearch()"/>
+        </div>
+        <div class="Music_library" id="MusicLibrary" style="display: none;">
+            <img src="img/Icons/Homepage/Music_library/library_background.png" alt="Image for library_background" class="library_background" />
+            <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" class="newmusicRecordingImage" onclick="toggleCloseMusicLibrary()"/>
+            <div class="Animals">
+                <img src="img/Icons/Homepage/Music_library/Animals/Paw.png" alt="Image for Paw" class="Paw" />
+                <img src="img/Icons/Homepage/Music_library/Animals/Dog.png" alt="Image for Dog" class="Dog" onclick="toggleOpenMusicButton()"/>
+                <img src="img/Icons/Homepage/Music_library/Animals/Cat.png" alt="Image for Cat" class="Cat" />
+                <img src="img/Icons/Homepage/Music_library/Animals/Cow.png" alt="Image for Cow" class="Cow" />
+                <img src="img/Icons/Homepage/Music_library/Animals/Chicken.png" alt="Image for Chicken" class="Chicken" />
+            </div>
+            <div class="Instruments">
+                <img src="img/Icons/Homepage/Music_library/Instruments/guitar_logo.png" alt="Image for guitar_logo" class="guitar_logo" />
+                <img src="img/Icons/Homepage/Music_library/Instruments/guitar.png" alt="Image for guitar" class="guitar" />
+                <img src="img/Icons/Homepage/Music_library/Instruments/Drum.png" alt="Image for Drum" class="Drum" />
+                <img src="img/Icons/Homepage/Music_library/Instruments/piano.png" alt="Image for piano" class="piano" />
+                <img src="img/Icons/Homepage/Music_library/Instruments/trumpet.png" alt="Image for trumpet" class="trumpet" />
+            </div>
+            <div class="Natural">
+                <img src="img/Icons/Homepage/Music_library/Natural/pure_natural.png" alt="Image for pure_natural" class="pure_natural" />
+                <img src="img/Icons/Homepage/Music_library/Natural/waterfull.png" alt="Image for waterfull" class="waterfull" />
+                <img src="img/Icons/Homepage/Music_library/Natural/flash.png" alt="Image for flash" class="flash" />
+                <img src="img/Icons/Homepage/Music_library/Natural/cloud.png" alt="Image for cloud" class="cloud" />
+                <img src="img/Icons/Homepage/Music_library/Natural/wind.png" alt="Image for wind" class="wind" />
+            </div>
+            <div class="Special">
+                <img src="img/Icons/Homepage/Music_library/Special/foot.png" alt="Image for foot" class="foot" />
+                <img src="img/Icons/Homepage/Music_library/Special/grass.png" alt="Image for grass" class="grass" />
+                <img src="img/Icons/Homepage/Music_library/Special/high_heeled_shoe.png" alt="Image for high_heeled_shoe" class="high_heeled_shoe" />
+                <img src="img/Icons/Homepage/Music_library/Special/stairs.png" alt="Image for stairs" class="stairs" />
+                <img src="img/Icons/Homepage/Music_library/Special/snow_flake.png" alt="Image for snow_flake" class="snow_flake" />
+            </div>
+        </div>
+        <div class="Search" id="Search" style="display: none;">
+            <img src="img/Icons/Homepage/Search/search.png" alt="Image for Search" class="search" />
         </div>
     </div>
-</body>
+</body> 
 </html>

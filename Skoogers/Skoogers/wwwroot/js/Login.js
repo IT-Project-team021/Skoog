@@ -10,7 +10,7 @@ function login(){
     if(inputUsername === username && inputPassword === password){
         hideLogin();
         changeUserIcon();
-        window.location.href = "Checkin.html";
+        window.location.href = "HomePage.html";
     }else{
         showWrongPwd();
     }
