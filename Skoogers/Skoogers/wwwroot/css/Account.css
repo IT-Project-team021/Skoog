@@ -1,0 +1,75 @@
+.Menu_bar {
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px;
+    height: 130px;
+}
+
+.background {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background-color: #C6EFF9;
+    margin: 0;
+}
+
+.left_part{
+    position: absolute;
+    width: 28%;
+}
+
+.icon_checkin {
+    position: absolute;
+    width: 6.4%;
+    top: 780px;
+    left: 13px;
+}
+
+.icon_record {
+    position: absolute;
+    width: 6.2%;
+    top: 786px;
+    left: 210px;
+}
+
+.icon_achievement {
+    position: absolute;
+    width: 6.2%;
+    top: 790px;
+    left: 401px;
+}
+
+.right_menu img{
+    position: absolute;
+    width: 55%;
+    top: 200px;
+    left: 700px;
+}
