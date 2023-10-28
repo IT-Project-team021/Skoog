@@ -1,0 +1,179 @@
+.Menu_bar {
+    background-color: #000000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px;
+    height: 130px;
+}
+
+.background {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background-color: #C6EFF9;
+    margin: 0;
+}
+
+.Record_icon {
+    width: 20%;
+}
+
+.Record_icon img{
+    position: absolute;
+    width: 20%;
+    top: 160px;
+    left: 50px;
+}
+
+.Records {
+    position: absolute;
+    width: 1800px;
+    height: 660px;
+    background-color: rgb(255, 255, 255);
+    top: 350px;
+    left: 50px;
+    overflow: auto;
+    border-radius: 40px;
+}
+
+.A, .B, .C {
+    margin-top: 60px;
+    margin-left: 60px;
+    text-decoration: underline;
+}
+
+.A {
+    color: #f7b7b7;
+}
+
+.B {
+    color: #ffc875;
+}
+
+.C {
+    color: #a9ffcd;
+}
+
+.Record {
+    height: 180px;
+    margin-top: -20px;
+    margin-left: 180px;
+}
+
+.Record ul {
+    display: inline-flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.Record li {
+    float: left;
+    width: 220px;
+    height: 120px;
+    margin-right: 80px;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.Record_A li {
+    background-color: #f7b7b7;
+}
+
+.cloud {
+    position: absolute;
+    width: 7%;
+    top: 90px;
+    left: 50px;
+}
+
+.wind {
+    position: absolute;
+    width: 6%;
+    top: 370px;
+    left: 60px;
+}
+
+.sunny {
+    position: absolute;
+    width: 6%;
+    top: 660px;
+    left: 60px;
+}
+
+.Record_B li {
+    background-color: #ffc875;
+}
+
+.Record_C li {
+    background-color: #a9ffcd;
+}
+
+.switch_background {
+    position: absolute;
+    width: 20%;
+    top: 350px;
+    left: 1300px;
+}
+
+.flower {
+    position: absolute;
+    width: 9%;
+    top: 750px;
+    left: 1500px;
+}
+
+.name {
+    position: absolute;
+    width: 6%;
+    top: 370px;
+    left: 1450px;
+}
+
+.date {
+    position: absolute;
+    width: 6%;
+    top: 490px;
+    left: 1550px;
+}
+
+.Isolation {
+    position: absolute;
+    width: 140px;
+    height: 660px;
+    top: 350px;
+    left: 1680px;
+    background-color: #C6EFF9;
+}

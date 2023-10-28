@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var Record = document.getElementById("icon_record");
 
     Record.addEventListener("click", function() {
-        window.location.href = "Record.html";
+        window.location.href = "Record_Name.html";
     });
 
     var Achievement = document.getElementById("icon_achievement");

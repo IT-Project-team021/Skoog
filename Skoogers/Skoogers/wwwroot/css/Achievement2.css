@@ -1,12 +1,40 @@
 .Menu_bar {
-    background-color: #EBE9E9;
+    background-color: #000000;
     padding: 10px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
     gap: 10px;
 }
 
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px;
+    height: 130px;
+}
+
 .background {
+    position: relative;
     width: 1920px;
     height: 1080px;
     background-color: #C6EFF9;
@@ -26,7 +54,14 @@
     font-size: x-large;
 }
 
-.left, .right {
+.icon_achievement {
+    position: absolute;
+    width: 25%;
+    top: 160px;
+    left: 40px;
+}
+
+.right {
     flex: 1;
 }
 
@@ -47,18 +82,27 @@ li {
     display: flex;
     justify-content: space-between;
     width: 1900px;
-    height: 850px;
-    margin: 0 auto;
+    height: 700px;
+    margin-top: 80px;
     overflow: auto;
 }
 
 .Achievement_left {
     display: flex;
     justify-content: space-between;
-    width: 450px;
-    height: 850px;
-    margin: 0 auto;
+    width: 600px;
+    height: 700px;
     overflow: auto;
+    z-index: 2;
+}
+
+.background_left {
+    position: absolute;
+    width: 330px;
+    height: 700px;
+    margin-left: 50px;
+    border-radius: 30px;
+    background-color: #252525;
 }
 
 .Achievement_left ul {
@@ -71,8 +115,8 @@ li {
     float: left;
     width: 250px;
     height: 120px;
-    background-color: #f3f570;
-    margin-left: 35px;
+    background-color: #fcb900;
+    margin-left: 90px;
     margin-top: 20px;
     border-radius: 20px;
 
@@ -81,6 +125,7 @@ li {
     justify-content: center;
     align-items: center;
     font-size: 30px;
+    color: white;
 }
 
 .Achievement_left .last {
@@ -90,10 +135,25 @@ li {
 .Achievement_right {
     display: flex;
     justify-content: space-between;
-    width: 1900px;
-    height: 850px;
+    width: 1700px;
+    height: 700px;
     margin: 0 auto;
     overflow: auto;
+    z-index: 2;
+}
+
+.background_right {
+    position: absolute;
+    width: 1300px;
+    height: 700px;
+    margin-left: 540px;
+    border-radius: 30px;
+    background-color: #252525;
+}
+
+.Achievement_right li {
+    width: 1200px;
+    margin-left: 90px;
 }
 
 .Achievement_right ul {
@@ -105,10 +165,11 @@ li {
 .achievement-item {
     width: 1400px;
     height: 120px;
-    background-color: #f3f570;
+    background-color: #fcb900;
     margin-left: 60px;
     margin-top: 20px;
     border-radius: 20px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -116,13 +177,13 @@ li {
 }
 
 .achievement-title {
-    margin-left: 140px;
-    color: #333;
+    margin-left: 60px;
+    color: white;
 }
 
 .achievement-progress {
     margin-right: 30px;
-    color: #333;
+    color: white;
 }
 
 .achievement-item.last {

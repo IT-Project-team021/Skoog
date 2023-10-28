@@ -4,23 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achievement1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="css/Achievement1.css">
+    <script src="js/Achievement1.js"></script>
 </head>
 <body>
     <div class="background">
         <div class="Menu_bar">
-            <div>
-                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
+            <div class="Left_buttons">
+                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings"/>
+                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad"/>
+                <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button"/>
             </div>
-            <div class="account">
-                <img src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick=""/>
+            <div class="Right_button">
+                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Homepage"/>
+                <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window"/>
             </div>
         </div>
         <div class="content">
             <div class="left">
-                <p>Achievement</p>
+                <img src="img/Icons/Achievement/icon_achievement.png" alt="Image for icon_achievement" class="icon_achievement"/>
             </div>
             <div class="right">
                 <p><span>Achievements have been completed</span>0</p>
@@ -28,7 +31,7 @@
         </div>
         <div class="Achievement_button">
             <u1>
-                <li>Record</li>
+                <li id="record">Record</li>
                 <li>Game 1</li>
                 <li>Game 2</li>
                 <li>Game 3</li>
