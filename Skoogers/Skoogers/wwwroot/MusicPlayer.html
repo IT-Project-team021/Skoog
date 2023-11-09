@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Music Player</title>
+        <link rel="stylesheet" href="css/MusicPlayer.css">
+        
+    </head>
+    <body> 
+        <!--
+            <button onclick="document.getElementById('media').play();">Play it</button>
+        -->
+        <audio id = "media" preload="auto">
+            <source id = "song" src="audio/天堂に駆ける.517058166.mp3" type="audio/mpeg">
+            
+        </audio>
+        
+        <website>
+            <div class="Menu_bar">
+                <div class="Left_buttons">
+                    <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" id="musicRecordingImage" onclick="toggleOpenMusicLibrary()"/>
+                    <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad"/>
+                    <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button"/>
+                </div>
+                <div class="Right_button">
+                    <a href = "HomePage.html">
+                        <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
+                    </a>
+                    <a href = "Account.html">
+                        <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window" id="account"/>
+                    </a>
+                    
+                </div>
+            </div>
+            
+
+            <div class="container">
+                <img class="background" src="img/Icons/Background_image/Candy_Background.png" alt="candy background" />
+                <img class="cd" src="img/Icons/Music_Player/CD_rain-origin.png" />
+                <div class="stylus">
+                    <img id = "stylus_pin" src="img/Icons/Music_Player/Stylus_paused.png" />
+                </div>
+                
+                <div class="button-container">
+                    <a href="#" class="cycle-button">
+                        <img id = "repeat-button" onclick=isLoop() src="img/Icons/Music_Player/Repeat.png" alt="cycle-icon">
+                    </a>
+                    <a href="#" class="play-button">
+                        <img id = "play-pause"  onclick=isPlay() src="img/Icons/Music_Player/Pause-wait for play.png"  alt="play-icon">
+                        <!--<img class = "pause" src="img/Icons/Music_Player/Pause.png" alt="pause-icon"> -->
+                    </a>
+                    <a href="#" class="switch-button" onclick=isSwitch()>
+                        <img src="img/Icons/Music_Player/Skip Fwd.png" alt="switch-button">
+                    </a>
+                </div>
+                <a href = "EmotionBubble.html">
+                    <img class = "back-button" src = "img/Icons/Music_Player/Back.png" alt = "back-button">
+                </a>
+                <div class = "like">
+                    <img id = "if-like" onclick =ifLike() src = "img/Icons/Music_Player/Like_before.png">
+                </div>
+            </div>
+            
+            
+        </website>
+        <script>
+            
+            let audio1 = document.getElementById('media');
+            let isPlaying = false;
+            let playPauseIcon = document.getElementById('play-pause');
+            let isRotated = false;
+            const cd = document.querySelector(".cd");
+
+            let ifSwitch = false;
+            let cdImage = document.querySelector(".cd"); 
+            let musicBackground = document.querySelector(".background");
+            let currentMedia = document.getElementById("media");
+            let currentMusic = document.getElementById("song");
+
+            let stylus = document.getElementById("stylus_pin");
+
+
+            let isLike = false;
+            let likeIcon = document.getElementById("if-like");
+
+            function isPlay(){
+                if (isPlaying){
+                    audio1.pause();
+                    cd.style.animationPlayState = "paused";
+                    stylus.src = "img/Icons/Music_Player/Stylus_paused.png";
+                    playPauseIcon.src = 'img/Icons/Music_Player/Pause-wait for play.png';
+                }
+                else {
+                    audio1.play();
+                    cd.style.animationPlayState = "running";
+                    stylus.src = "img/Icons/Music_Player/player_pin.png";
+                    playPauseIcon.src = 'img/Icons/Music_Player/Pause.png';
+                }
+                isPlaying = !isPlaying
+
+            }
+
+
+            // if switch to another song, here we only have two songs as example
+            function isSwitch(){
+                ifSwitch = !ifSwitch;
+                isPlaying = false;
+                cd.style.animationPlayState = "paused";
+                playPauseIcon.src = 'img/Icons/Music_Player/Pause-wait for play.png';
+                repeatIcon.src = "img/Icons/Music_Player/Repeat.png";
+                currentMedia.loop = false;
+                stylus.src = "img/Icons/Music_Player/Stylus_paused.png";
+                isLooping = false
+                likeIcon.src="img/Icons/Music_Player/Like_before.png";
+                isLike = false;
+
+                if (ifSwitch){
+                    cdImage.src = "img/Icons/Music_Player/CD_cafe.png";
+                    currentMusic.src = "audio/赤とんぼ.mp3";
+                    musicBackground.src = "img/Icons/Background_image/teddy_background.png";
+                    
+                }
+                else {
+                    cdImage.src = "img/Icons/Music_Player/CD_rain-origin.png";
+                    currentMusic.src = "audio/天堂に駆ける.517058166.mp3";
+                    musicBackground.src = "img/Icons/Background_image/Candy_Background.png";
+                    
+                }
+                currentMedia.load();
+                
+            }
+
+
+            currentMedia.addEventListener("ended", function() {
+                cd.style.animationPlayState = "paused"; // 当音乐结束时，暂停 CD 的旋转动画
+                stylus.src = "img/Icons/Music_Player/Stylus_paused.png";
+                isPlaying = false;
+                playPauseIcon.src = 'img/Icons/Music_Player/Pause-wait for play.png';
+                
+            });
+            
+
+            // make a button to loop the song
+            let isLooping = false;
+            let repeatIcon = document.getElementById("repeat-button");
+            function isLoop(){
+                if (isLooping){
+                    repeatIcon.src = "img/Icons/Music_Player/Repeat.png";
+                    currentMedia.loop = false;
+                }
+                else {
+                    repeatIcon.src = "img/Icons/Music_Player/Repeat_after.png";
+                    currentMedia.loop = true;
+                }
+                isLooping = !isLooping;
+            }
+
+            //check if like this song
+
+            function ifLike(){
+                if (isLike){
+                    likeIcon.src="img/Icons/Music_Player/Like_before.png";
+                }
+                else {
+                    likeIcon.src="img/Icons/Music_Player/Like_after.png";
+                }
+                isLike = !isLike;
+            }
+            
+            
+        </script>
+        
+    </body>
+</html>

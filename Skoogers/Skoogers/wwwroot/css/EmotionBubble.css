@@ -11,14 +11,13 @@
     align-items: center;
 }
 
-.background-image {
-    background-image: url("/Skoog/Skoogers/Skoogers/wwwroot/img/Icons/Background_image/sunshine.jpeg");
+.background {
+    background-color: #F2FCFE;
     background-size: cover; 
     position: absolute;
     width: 1920px;
     height: 1080px;
     background-repeat: no-repeat; 
-    opacity: 0.3;
     background-position: center center; 
     z-index: -1;
 }
@@ -73,4 +72,12 @@
     top: 477px;
     width: 305px;
     height: 283px;
+}
+
+#homepage_button {
+    position: absolute;
+    left: 1600px;
+    top: 20px;
+    width: 130px;
+    height: 130px;
 }

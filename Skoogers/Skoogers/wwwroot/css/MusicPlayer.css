@@ -1,0 +1,133 @@
+.Menu_bar {
+    background-color: #333333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px;
+    height: 130px;
+}
+
+
+.container {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.stylus {
+    width: 200px;
+    height: 311px;
+    margin-left: 1020px;
+    position: absolute;
+}
+
+.cd {
+    width: 600px; 
+    position: absolute;
+    top: 67px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotate 8s linear infinite paused; 
+}
+
+@keyframes rotate {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+.container {
+    align-items: center;
+}
+
+.button-container {
+    width: 577px;
+    height: 154px;
+    left: 657px;
+    top: 685px;
+    position: relative;
+    background-color: black;
+    opacity: 0.6;
+    border-radius: 20px;
+    align-items: center;
+}
+
+.cycle-button {
+    width: 120px;
+    height: 120px;
+    left: 16px;
+    bottom: 14px;
+    position: relative;
+
+}
+
+.play-button {
+    width: 144px;
+    height: 144px;
+    left: 80px;
+    bottom: 16px;
+    position: relative;
+}
+
+.like {
+    width: 140px;
+    height: 145px;
+    left: 1724px;
+    top: -240px;
+    position: relative;
+}
+
+
+
+.switch-button {
+    width: 144px;
+    height: 144px;
+    left: 100px;
+    position: relative;
+}
+
+.back-button {
+    width: 168px;
+    height: 168px;
+    left: 1730px;
+    top: 701px;
+    position: relative;
+}
