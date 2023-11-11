@@ -1,0 +1,185 @@
+.Menu_bar {
+    background-color: #333333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 1920px;
+    height: 157px;
+    overflow: auto;
+    box-sizing: border-box; 
+    align-items: center;
+}
+
+.Menu_bar > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Menu_bar .Left_buttons img {
+    margin-left: 20px;
+    margin-right: 40px;
+    align-items: center;
+}
+
+.Menu_bar .Right_button img {
+    margin-right: 20px;
+    align-items: center;
+}
+
+#homepage_button {
+    width: 130px;
+    height: 130px;
+}
+
+.background {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    background-color: #E0FFC0;
+    margin: 0;
+}
+
+.stop_button {
+    position: absolute;
+    top: 120px;
+    left: 1785px;
+    width: 220px;
+    height: 220px;
+}
+
+.health_points {
+    position: absolute;
+    top: 190px;
+    left: 30px;
+    display: flex;
+}
+
+.health_points img {
+    width: 115px;
+    height: 95px;
+    margin-right: 15px;
+}
+
+.top_image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70%;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.bottom_image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    margin-bottom: 25px;
+    margin-left: 30px;
+    filter: grayscale(100%);
+}
+
+.Music_botton {
+    position: relative;
+}
+
+/* Blue */
+.Music_botton img:nth-child(1) {
+    position: absolute;
+    top: 350px;
+    left: 770px;
+    width: 220px;
+    height: 220px;
+}
+
+/* Orange */
+.Music_botton img:nth-child(2) {
+    position: absolute;
+    top: 640px;
+    left: 770px;
+    width: 220px;
+    height: 220px;
+}
+
+/* Green */
+.Music_botton img:nth-child(3) {
+    position: absolute;
+    top: 350px;
+    left: 1060px;
+    width: 220px;
+    height: 220px;
+}
+
+/* Yellow */
+.Music_botton img:nth-child(4) {
+    position: absolute;
+    top: 60px;
+    left: 770px;
+    width: 220px;
+    height: 220px;
+}
+
+/* Red */
+.Music_botton img:nth-child(5) {
+    position: absolute;
+    top: 350px;
+    left: 480px;
+    width: 220px;
+    height: 220px;
+}
+
+.Musical_notes {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    visibility: hidden;
+}
+
+/* Blue */
+.Musical_notes img:nth-child(1) {
+    position: absolute;
+    top: 390px;
+    left: 815px;
+}
+
+/* Orange */
+.Musical_notes img:nth-child(2) {
+    position: absolute;
+    top: 680px;
+    left: 815px;
+}
+
+/* Green */
+.Musical_notes img:nth-child(3) {
+    position: absolute;
+    top: 390px;
+    left: 1105px;
+}
+
+/* Yellow */
+.Musical_notes img:nth-child(4) {
+    position: absolute;
+    top: 100px;
+    left: 815px;
+}
+
+/* Red */
+.Musical_notes img:nth-child(5) {
+    position: absolute;
+    top: 390px;
+    left: 525px;
+}
+
+.message {
+    display: none; /* Start with the messages hidden */
+    /*display: block; */ /* Ensure visible class makes the image visible */
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for the exact center */
+    z-index: 1000; /* Ensure it's on top of other elements */
+    max-width: 80%; /* Maximum width, adjust as necessary */
+    max-height: 40%; /* Maximum height, adjust as necessary */
+}

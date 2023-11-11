@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
+    <link rel="stylesheet" href="css/MemoryGame.css">
+
+</head>
+<body>
+    <button onclick="playSound('blue')">Play Blue Sound</button>
+    <audio id="blue_sound" src="audio/memoryGameAudio/blue_button.mp3" preload="auto"></audio>
+    <audio id="orange_sound" src="audio/memoryGameAudio/orange_button.mp3" preload="auto"></audio>
+    <audio id="green_sound" src="audio/memoryGameAudio/green_button.mp3" preload="auto"></audio>
+    <audio id="yellow_sound" src="audio/memoryGameAudio/yellow_button.mp3" preload="auto"></audio>
+    <audio id="red_sound" src="audio/memoryGameAudio/yellow_button.mp3" preload="auto"></audio>
+
+    <div class="background">
+        <div class="Menu_bar">
+            <div class="Left_buttons">
+                <img src="img/Icons/MemoryGame/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
+                <img src="img/Icons/MemoryGame/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
+                <img src="img/Icons/MemoryGame/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
+            </div>
+            <div class="Right_button">
+                <img id="homepage_button" src="img/Icons/MemoryGame/icon _HomePage.png" alt="Image for Log in window" />
+                <img id="login_button" src="img/Icons/MemoryGame/User1.png" alt="Image for Log in window" onclick="showLogin()"/>
+            </div>
+            <div class="stop_button">
+                <img src="img/Icons/MemoryGame/stop_button.png" alt="Image for stop_button">
+            </div>
+            <div class="health_points">
+                <img src="img/Icons/MemoryGame/redHeart.png" alt="Image for red_heart" />
+                <img src="img/Icons/MemoryGame/redHeart.png" alt="Image for red_heart" />
+                <img src="img/Icons/MemoryGame/redHeart.png" alt="Image for red_heart" />
+            </div>
+        </div>
+        <div class="Music_botton">
+            <img src="img/Icons/MemoryGame/blue_button.png" alt="Image for blue_button" id="blue_button" onclick="playSound('blue')"/>
+            <img src="img/Icons/MemoryGame/orange_button.png" alt="Image for orange_button" id="orange_button" onclick="playSound('orange')"/>
+            <img src="img/Icons/MemoryGame/green_button.png" alt="Image for green_button" id="green_button" onclick="playSound('green')"/>
+            <img src="img/Icons/MemoryGame/yellow_button.png" alt="Image for yellow_button" id="yellow_button" onclick="playSound('yellow')"/>
+            <img src="img/Icons/MemoryGame/red_button.png" alt="Image for red_button" id="red_button" onclick="playSound('red')"/>
+        </div>
+        <div class="Musical_notes">
+            <img src="img/Icons/MemoryGame/musical_note.png" class="note" id="blue_note" alt="Music note for blue_button"/>
+            <img src="img/Icons/MemoryGame/musical_note.png" class="note" id="orange_note" alt="Music note for orange_button"/>
+            <img src="img/Icons/MemoryGame/musical_note.png" class="note" id="green_note" alt="Music note for green_button"/>
+            <img src="img/Icons/MemoryGame/musical_note.png" class="note" id="yellow_note" alt="Music note for yellow_button"/>
+            <img src="img/Icons/MemoryGame/musical_note.png" class="note" id="red_note" alt="Music note for red_button"/>
+        </div>
+        <div class="message">
+            <img src="img/Icons/MemoryGame/fail.png" alt="Image for fail" id="fail_image" />
+            <img src="img/Icons/MemoryGame/success.png" alt="Image for success" id="success_image" />
+        </div>
+    </div>
+    <script src="js/memoryGame.js"></script>
+    </body>
+</html>
