@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,46 +10,103 @@
     <script src="js/Login.js"></script>
 </head>
 <body>
-    <div class="background">
-        <div class="Menu_bar">
-            <div class="Left_buttons">
-                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
-            </div>
-            <div class="Right_button">
-                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
-                <img id="login_button" src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick="showLogin()"/>
-            </div>
-        </div>
-        <div class="hint" id="login_hint">
-            Please click on the<br>
-            upper right corner to log in
-        </div>
-        <div class="log-in">
-            <button class="close-btn" onclick="hideLogin()"> &times; </button>
-            <div class="logo">
-                <img src="img/Icons/Login_Window/logo.png" alt="Image for Logo" />
-            </div>
-            <div class="account">
-                <div class="account-icon"></div>
-                <div class="account-input">
-                    <input type="email" name="account_email" id="accountEmail">
+    <website>
+        <div class="background">
+            <div class="Menu_bar">
+                <div class="Left_buttons">
+                    <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
+                    <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
+                    <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
+                </div>
+                <div class="Right_button">
+                    <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
+                    <img id="login_button" src="img/Icons/Homepage/icon _User Circle_.png" alt="Image for Log in window" onclick="showLogin()"/>
                 </div>
             </div>
-            <div class="password">
-                <div class="password-icon"></div>
-                <div class="password-input">
-                    <input type="password" name="password-input" id="passwordInput">
+            <div class="hint" id="login_hint">
+                Please click on the<br>
+                upper right corner to log in
+            </div>
+            <div class="log-in">
+                <button class="close-btn" onclick="hideLogin()"> &times; </button>
+                <div class="logo">
+                    <img src="img/Icons/Login_Window/logo.png" alt="Image for Logo" />
+                </div>
+                <div class="account">
+                    <div class="account-icon"></div>
+                    <div class="account-input">
+                        <input type="email" name="account_email" id="accountEmail">
+                    </div>
+                </div>
+                <div class="password">
+                    <div class="password-icon"></div>
+                    <div class="password-input">
+                        <input type="password" name="password-input" id="passwordInput">
+                    </div>
+                </div>
+                <div class="log-in-error-message">Invalid username or incorrect password~</div>
+                <div>
+                    <button class="log-in-button" onclick="login()">
+                        <span class="text-wrapper">Log In</span>
+                    </button>
                 </div>
             </div>
-            <div class="log-in-error-message">Invalid username or incorrect password~</div>
-            <div>
-                <button class="log-in-button" onclick="login()">
-                    <span class="text-wrapper">Log In</span>
-                </button>
-            </div>
-        </div>
-    </div>
+        </div> 
+    </website>
+    <script>
+        var username = "user1@user.com";
+        var password = "123";
+        var userIcon = "img/Icons/Homepage/User1.png";
+
+
+        function login(){
+            var inputUsername = document.getElementById("accountEmail").value;
+            var inputPassword = document.getElementById("passwordInput").value;
+
+            if(inputUsername === username && inputPassword === password){
+                hideLogin();
+                changeUserIcon();
+                window.location.href = "HomePage.html";
+            }else{
+                showWrongPwd();
+            }
+        }
+
+        function changeUserIcon(){
+            var image = document.getElementById("login_button");
+            image.src = userIcon;
+        }
+
+        function showWrongPwd(){
+            var wrongPwdElement = document.querySelector('.log-in-error-message');
+            wrongPwdElement.style.display = 'block';
+        }
+
+        function showLogin() {
+            var loginElement = document.querySelector('.log-in');
+            loginElement.style.display = 'block';
+        }
+
+        function hideLogin() {
+            document.querySelector('.log-in').style.display = 'none';
+        }
+
+        document.addEventListener("click", function(event) {
+            if (
+                event.target.id !== "login_button" &&
+                !document.querySelector('.log-in').contains(event.target)
+            ) {
+                document.getElementById("login_hint").style.display = "block";
+                setTimeout(function() {
+                    document.getElementById("login_hint").style.display = "none";
+                }, 2000);
+            }
+        });
+
+        document.getElementById("login_hint").addEventListener("click", function(event) {
+            event.stopPropagation();
+        });
+    </script>
+    
 </body>
 </html>
