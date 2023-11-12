@@ -47,6 +47,3 @@ document.addEventListener("click", function(event) {
     }
 });
 
-document.getElementById("login_hint").addEventListener("click", function(event) {
-    event.stopPropagation();
-});
