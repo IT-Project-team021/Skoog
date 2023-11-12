@@ -1,38 +1,4 @@
-.Menu_bar {
-    background-color: #333333;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 1920px;
-    height: 157px;
-    overflow: auto;
-    box-sizing: border-box; 
-    align-items: center;
-}
 
-.background {
-    background-color: #F2FCFE;
-    background-size: cover; 
-    position: absolute;
-    width: 1920px;
-    height: 1080px;
-    background-repeat: no-repeat; 
-    background-position: center center; 
-    z-index: -1;
-}
-
-.Menu_bar > div {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.Menu_bar img {
-    margin-left: 20px;
-    margin-right: 20px;
-    align-items: center;
-}
 
 .angry {
     position: absolute;

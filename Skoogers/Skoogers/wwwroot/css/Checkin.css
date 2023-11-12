@@ -1,32 +1,4 @@
-.Menu_bar {
-    background-color: #000000;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    width: 1920px;
-    height: 157px;
-    overflow: auto;
-    box-sizing: border-box; 
-    align-items: center;
-}
 
-.Menu_bar > div {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.Menu_bar .Left_buttons img {
-    margin-left: 20px;
-    margin-right: 40px;
-    align-items: center;
-}
-
-.Menu_bar .Right_button img {
-    margin-right: 20px;
-    align-items: center;
-}
 
 #homepage_button {
     width: 130px;

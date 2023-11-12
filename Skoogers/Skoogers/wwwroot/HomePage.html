@@ -6,35 +6,42 @@
     <title>HomePage</title>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap">
     <link rel="stylesheet" href="css/HomePage.css">
+    <link rel="stylesheet" href="css/MenuBar.css">
     <script src="js/homepage.js"></script>
 </head>
-<body>
+<body>                
     <div class="background">
         <div class="Menu_bar">
             <div class="Left_buttons">
                 <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" id="musicRecordingImage" onclick="toggleOpenMusicLibrary()"/>
-                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad"/>
+                <a href="MemoryGame.html">
+                    <img src="img/Icons/MemoryGame/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
+                </a>
                 <a href="EmotionBubble.html">
-                    <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button"/>
+                    <img src="img/Icons/MemoryGame/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
                 </a>
                 
             </div>
             <div class="Right_button">
-                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
-                <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window" id="account"/>
+                <a href="HomePage.html">
+                    <img id="homepage_button" src="img/Icons/MemoryGame/icon _HomePage.png" alt="Image for Log in window" />
+                </a>
+                <a href="Account.html">
+                    <img id="login_button" src="img/Icons/MemoryGame/User1.png" alt="Image for Log in window" onclick="showLogin()"/>
+                </a>
             </div>
-            <div class="record_button">
-                <div class="record_background">
-                    <img src="img/Icons/Homepage/Record_Buttons/record_button.png" alt="record_button Image" class="top_image" id="recordImage" onclick="toggleRecordingButton()"/>
-                    <img src="img/Icons/Homepage/Record_Buttons/undo.png" alt="undo Image" class="bottom_image" id="undo" onclick="togglecloseMusicButton()"/>
-                </div>
+        </div>
+        <div class="record_button">
+            <div class="record_background">
+                <img src="img/Icons/Homepage/Record_Buttons/record_button.png" alt="record_button Image" class="top_image" id="recordImage" onclick="toggleRecordingButton()"/>
+                <img src="img/Icons/Homepage/Record_Buttons/undo.png" alt="undo Image" class="bottom_image" id="undo" onclick="togglecloseMusicButton()"/>
             </div>
-            <div class="recording_button" id="recordingButton" style="display: none;">
-                <div class="recording_background">
-                    <img src="img/Icons/Homepage/Record_Buttons/Termination.png" alt="record_button Image" class="termination_image" onclick="toggleRecordingButton()">
-                    <img src="img/Icons/Homepage/Record_Buttons/Clock.png" alt="record_button Image" class="clock_image">
-                    <img src="img/Icons/Homepage/Record_Buttons/Start.png" alt="record_button Image" class="start_image">
-                </div>
+        </div>
+        <div class="recording_button" id="recordingButton" style="display: none;">
+            <div class="recording_background">
+                <img src="img/Icons/Homepage/Record_Buttons/Termination.png" alt="record_button Image" class="termination_image" onclick="toggleRecordingButton()">
+                <img src="img/Icons/Homepage/Record_Buttons/Clock.png" alt="record_button Image" class="clock_image">
+                <img src="img/Icons/Homepage/Record_Buttons/Start.png" alt="record_button Image" class="start_image">
             </div>
         </div>
         <div class="Music_button">

@@ -5,22 +5,27 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Emotion Bubble</title>
         <link rel="stylesheet" href="css/EmotionBubble.css">
+        <link rel="stylesheet" href="css/MenuBar.css">
     </head>
     <body> 
         <div class="Menu_bar">
-            <div>
-                <img src="img/Icons/Homepage/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
-                <img src="img/Icons/Homepage/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
-                <a href = "EmotionBubble.html">
-                    <img src="img/Icons/Homepage/icon _Music Player Button_.png" alt="Image for player button" />
+            <div class="Left_buttons">
+                <img src="img/Icons/MemoryGame/icon _Music Recordings_.png" alt="Image for Music Recordings" onclick="showContent('music_recording')" />
+                <a href="MemoryGame.html">
+                    <img src="img/Icons/MemoryGame/icon _Gamepad_.png" alt="Image for Gamepad" onclick="showContent('music_recording')" />
+                </a>
+                <a href="EmotionBubble.html">
+                    <img src="img/Icons/MemoryGame/icon _Music Player Button_.png" alt="Image for player button" onclick="showContent('music_recording')" />
                 </a>
                 
             </div>
-            <a href="HomePage.html">
-                <img id="homepage_button" src="img/Icons/Homepage/icon _HomePage.png" alt="Image for Log in window" />
-            </a>
-            <div class="account_button">
-                <img id="login_button" src="img/Icons/Homepage/User1.png" alt="Image for Log in window"/>
+            <div class="Right_button">
+                <a href="HomePage.html">
+                    <img id="homepage_button" src="img/Icons/MemoryGame/icon _HomePage.png" alt="Image for Log in window" />
+                </a>
+                <a href="Account.html">
+                    <img id="login_button" src="img/Icons/MemoryGame/User1.png" alt="Image for Log in window" onclick="showLogin()"/>
+                </a>
             </div>
         </div>
         <div class = "background">

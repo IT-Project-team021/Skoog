@@ -1,7 +1,17 @@
 // Array to hold the sequence of colors to be played
-const sequence = ['blue', 'green', 'blue', 'green', 'orange'];
+sequence = ['blue', 'green', 'blue', 'green', 'orange'];
 let currentStep = 0; // Tracks the current step in the sequence the player is on
 let health = 3; // Tracks the player's health (number of tries)
+
+function generateRandomSequence(length) {
+  const colors = ['blue', 'green', 'orange', 'yellow', 'red'];
+  const randomSequence = [];
+  for (let i = 0; i < length; i++) {
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    randomSequence.push(colors[randomIndex]);
+  }
+  return randomSequence;
+}
 
 // Plays the sound and shows the note associated with the given color
 function playSound(color) {
@@ -47,14 +57,12 @@ function checkInput(color) {
 
 // Function to show the success message
 function showSuccess() {
-    //const successImage = document.getElementById('success_image');
-    //successImage.style.display = 'block'; // Make the success image visible
-    //successImage.classList.add('visible'); // Use class to control visibility
-    setTimeout(() => {
-        alert('Great job!');
-        resetGame(); // Reset the game after showing the message
-      }, 1000); // Adjust the delay as needed for the message to show
-    }
+  setTimeout(() => {
+    alert('Great job!');
+    sequence = generateRandomSequence(sequence.length + 1); // Increase the sequence length by 1
+    resetGame();
+  }, 1000);
+}
 
 // Function to show the failure message
 function showFailure() {
@@ -93,12 +101,9 @@ function updateHealthDisplay() {
   function resetGame() {
     currentStep = 0;
     health = 3; // Reset health if needed
-    // Hide any messages
     hideMessages();
-    // Reset the health display if needed
     updateHealthDisplay();
-    // Start a new sequence
-    //startSequence();
+    sequence = generateRandomSequence(5); // Generate a new sequence of 5 notes
     setTimeout(startSequence, 1500);
   }
 
